@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CRA Moda · Moda joven en Cangas del Narcea</title>
+<meta name="description" content="CRA Moda: tienda multimarca de ropa joven, calzado, bolsos y accesorios en Cangas del Narcea (Asturias).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Fraunces:ital,wght@1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f6f1ea; --paper:#fffdf9; --ink:#1b2233; --mut:#677086;
+  --denim:#2f5f9e; --sky:#d3e3f5; --coral:#e2492f; --pink:#f6a9c4;
+  --line:rgba(27,34,51,.13); --r:22px;
+  --hf:'Bricolage Grotesque',sans-serif; --ac:'Fraunces',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{font-family:Inter,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.logo{font-family:var(--hf);line-height:1;letter-spacing:-.02em}
+h1,h2{font-weight:800}
+em{font-family:var(--ac);font-style:italic;font-weight:600;letter-spacing:0}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 max(24px,env(safe-area-inset-right)) 0 max(24px,env(safe-area-inset-left))}
+@media(min-width:1500px){.wrap{max-width:1360px}html{font-size:17px}}
+@media(min-width:2000px){.wrap{max-width:1560px}html{font-size:19px}}
+section{padding:104px 0;position:relative}
+.eyebrow{display:inline-block;font-weight:600;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:14px}
+
+/* ---------- botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 28px;border-radius:99px;font:600 .95rem Inter;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:.3s cubic-bezier(.2,.8,.2,1)}
+.btn:hover{background:var(--ink);color:var(--cream);transform:translateY(-3px)}
+.btn.pri{background:var(--coral);border-color:var(--coral);color:#fff;box-shadow:0 12px 30px rgba(226,73,47,.35)}
+.btn.pri:hover{background:var(--ink);border-color:var(--ink);box-shadow:0 16px 36px rgba(27,34,51,.3)}
+.btn svg{width:18px;height:18px}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:60;padding:16px 0;transition:.35s}
+nav.sc{background:rgba(246,241,234,.9);backdrop-filter:blur(14px);padding:10px 0;box-shadow:0 1px 0 var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.55rem;font-weight:800}
+.logo b{display:grid;place-items:center;height:40px;padding:0 12px;border-radius:12px;background:var(--coral);color:#fff;font-size:1.15rem;letter-spacing:.02em;transform:rotate(-4deg);transition:.3s}
+.logo:hover b{transform:rotate(4deg) scale(1.06)}
+nav ul{display:flex;gap:30px;list-style:none;font-weight:500;font-size:.93rem}
+nav ul a{position:relative;padding:4px 0}
+nav ul a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--coral);transition:.3s}
+nav ul a:hover::after{width:100%}
+.navr{display:flex;align-items:center;gap:10px}
+.navtg{display:none;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;cursor:pointer;position:relative}
+.navtg i,.navtg i::before,.navtg i::after{position:absolute;left:12px;width:18px;height:2px;border-radius:2px;background:var(--ink);transition:.3s;content:""}
+.navtg i{top:20px}.navtg i::before{top:-6px;left:0}.navtg i::after{top:6px;left:0}
+.navtg.on i{background:transparent}.navtg.on i::before{top:0;transform:rotate(45deg)}.navtg.on i::after{top:0;transform:rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:130px 0 80px;overflow:hidden;background:
+  radial-gradient(circle at 88% 12%,rgba(246,169,196,.55),transparent 42%),
+  radial-gradient(circle at 5% 90%,rgba(211,227,245,.9),transparent 45%),var(--cream)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border-radius:99px;background:var(--paper);border:1px solid var(--line);font-size:.82rem;font-weight:600;margin-bottom:26px}
+.tag::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--coral);animation:pulse 1.7s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(226,73,47,.6)}100%{box-shadow:0 0 0 12px transparent}}
+.hero h1{font-size:clamp(3.2rem,8.4vw,7rem)}
+.hero h1 em{color:var(--coral);display:inline-block;transform:rotate(-2deg)}
+.hero h1 .u{position:relative;display:inline-block}
+.hero h1 .u::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.16em;background:var(--sky);z-index:-1;transform-origin:left;animation:ul 1.2s .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes ul{from{transform:scaleX(0)}}
+.hero p.sub{max-width:480px;margin:26px 0 32px;font-size:1.12rem;color:var(--mut)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.pills span{padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.6);font-size:.85rem;font-weight:500;transition:.3s}
+.pills span:hover{background:var(--denim);color:#fff;border-color:var(--denim);transform:translateY(-3px) rotate(-2deg)}
+
+/* collage */
+.collage{position:relative;height:min(600px,78vw);max-width:520px;margin-left:auto;width:100%}
+.ph{position:absolute;border-radius:var(--r);overflow:hidden;border:6px solid var(--paper);box-shadow:0 28px 60px rgba(27,34,51,.22);transition:transform .25s ease-out}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.p1{width:52%;aspect-ratio:3/4.4;top:2%;left:4%;--r0:-5deg;transform:rotate(-5deg)}
+.ph.p2{width:50%;aspect-ratio:3/4.4;top:20%;right:0;--r0:4deg;transform:rotate(4deg)}
+.ph.p3{width:44%;aspect-ratio:1/1.1;bottom:0;left:20%;--r0:-2deg;transform:rotate(-2deg)}
+.ph.p1,.ph.p2,.ph.p3{animation:bob 7s ease-in-out infinite}
+.ph.p2{animation-delay:-2.3s}.ph.p3{animation-delay:-4.6s}
+@keyframes bob{50%{translate:0 -14px}}
+.st{position:absolute;z-index:5;display:grid;place-items:center;text-align:center;font-family:var(--hf);font-weight:800;line-height:.95}
+.st.s1{top:-2%;right:20%;width:104px;height:104px;border-radius:50%;background:var(--pink);color:#fff;font-size:2rem;animation:wig 4s ease-in-out infinite}
+.st.s1 small{display:block;font:600 .62rem Inter;letter-spacing:.14em;text-transform:uppercase}
+.st.s2{bottom:12%;right:-2%;padding:12px 20px;border-radius:16px;background:var(--denim);color:#fff;font-size:1.5rem;transform:rotate(5deg);animation:wig 5s -1s ease-in-out infinite}
+.st.s3{left:-4%;bottom:34%;width:92px;height:92px}
+.st.s3 svg{width:100%;height:100%;animation:spin 16s linear infinite}
+.st.s3 span{position:absolute;font-size:1.5rem;color:var(--coral)}
+@keyframes wig{0%,100%{rotate:-6deg}50%{rotate:6deg}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:800px){.hero .wrap{grid-template-columns:1fr}.collage{margin:20px auto 0}}
+@media(min-width:801px) and (max-width:1000px){.hero .wrap{gap:20px}.hero h1{font-size:clamp(2.8rem,7vw,4.2rem)}.st.s2{font-size:1.2rem}}
+
+/* ---------- marquee ---------- */
+.marqw{overflow:hidden;padding:18px 0 6px}
+.marq{background:var(--ink);color:var(--cream);overflow:hidden;padding:20px 0;transform:rotate(-1.2deg) scaleX(1.04);margin:-14px 0 0;position:relative;z-index:3}
+.marq div{display:flex;gap:44px;width:max-content;animation:mq 32s linear infinite;font-family:var(--hf);font-weight:800;font-size:1.9rem;text-transform:uppercase;letter-spacing:.02em}
+.marq span{display:flex;align-items:center;gap:44px}
+.marq span::after{content:"✺";color:var(--pink)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- títulos ---------- */
+.head{max-width:640px;margin-bottom:52px}
+.head h2{font-size:clamp(2.4rem,5.4vw,4.2rem)}
+.head h2 em{color:var(--coral)}
+.head p{color:var(--mut);margin-top:14px}
+.head.row{max-width:none;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+
+/* ---------- categorías ---------- */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cat{position:relative;aspect-ratio:3/4.3;border-radius:var(--r);overflow:hidden;background:var(--sky);display:block}
+.cat img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.cat::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(27,34,51,.8));transition:.4s}
+.cat:hover img{transform:scale(1.1)}
+.cat:hover::after{background:linear-gradient(transparent 20%,rgba(226,73,47,.85))}
+.cat .t{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff;display:flex;justify-content:space-between;align-items:end}
+.cat h3{font-size:1.7rem}
+.cat small{display:block;font-size:.82rem;opacity:.85;margin-top:4px}
+.cat .ar{width:42px;height:42px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;transition:.4s;flex:none}
+.cat:hover .ar{transform:rotate(-45deg);background:var(--cream)}
+@media(max-width:900px){.cats{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.cat h3{font-size:1.35rem}.cat .t{left:14px;right:14px}.cat .ar{width:34px;height:34px}}
+
+/* ---------- lookbook ---------- */
+.look{background:var(--paper)}
+.arrows{display:flex;gap:10px}
+.arrows button{width:50px;height:50px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;cursor:pointer;font-size:1.2rem;transition:.3s;color:var(--ink)}
+.arrows button:hover{background:var(--ink);color:#fff}
+.track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;padding:6px 24px 24px;margin:0 -24px;scrollbar-width:none;cursor:grab}
+.track::-webkit-scrollbar{display:none}
+.track.drag{cursor:grabbing;scroll-snap-type:none}
+.card{flex:0 0 clamp(230px,26vw,290px);scroll-snap-align:start;position:relative}
+.card .im{aspect-ratio:3/4.4;border-radius:var(--r);overflow:hidden;background:var(--sky)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .7s;pointer-events:none;-webkit-user-drag:none}
+.card:hover img{transform:scale(1.08)}
+.card h3{font-size:1.25rem;margin:14px 4px 2px}
+.card p{font-size:.88rem;color:var(--mut);margin:0 4px}
+.card .n{position:absolute;top:12px;left:12px;background:var(--cream);font:700 .78rem var(--hf);padding:5px 12px;border-radius:99px}
+
+/* ---------- promos ---------- */
+.promos{background:var(--coral);color:#fff;overflow:hidden}
+.promos::before,.promos::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08)}
+.promos::before{width:420px;height:420px;top:-160px;left:-120px}.promos::after{width:300px;height:300px;bottom:-110px;right:-60px}
+.promos .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative;z-index:2}
+.promos h2{font-size:clamp(2.6rem,6vw,4.6rem)}
+.promos h2 em{color:var(--ink)}
+.promos p{margin:18px 0 28px;max-width:440px;opacity:.95;font-size:1.05rem}
+.promos .btn{border-color:#fff;color:#fff}
+.promos .btn:hover{background:#fff;color:var(--coral)}
+.promos .btn.wh{background:#fff;color:var(--coral);border-color:#fff}
+.promos .btn.wh:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.stk{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stk div{aspect-ratio:1;border-radius:26px;display:grid;place-items:center;text-align:center;font-family:var(--hf);font-weight:800;font-size:clamp(2.6rem,7vw,4.6rem);line-height:.9;transition:.4s cubic-bezier(.2,.8,.2,1);cursor:default}
+.stk div small{display:block;font:600 .7rem Inter;letter-spacing:.16em;text-transform:uppercase;margin-top:8px}
+.stk div:nth-child(1){background:var(--pink);transform:rotate(-4deg)}
+.stk div:nth-child(2){background:var(--ink);transform:rotate(3deg)}
+.stk div:nth-child(3){background:var(--sky);color:var(--denim);transform:rotate(2deg)}
+.stk div:nth-child(4){background:var(--paper);color:var(--coral);transform:rotate(-3deg)}
+.stk div:hover{transform:rotate(0) scale(1.07);z-index:2}
+@media(max-width:850px){.promos .wrap{grid-template-columns:1fr;gap:40px}}
+
+/* ---------- por qué ---------- */
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.perk{padding:28px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line);transition:.4s cubic-bezier(.2,.8,.2,1)}
+.perk:hover{transform:translateY(-8px) rotate(-1deg);background:var(--sky);border-color:transparent}
+.perk .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem;background:var(--cream);margin-bottom:18px}
+.perk h3{font-size:1.3rem;margin-bottom:8px}
+.perk p{color:var(--mut);font-size:.92rem}
+@media(max-width:900px){.perks{grid-template-columns:1fr 1fr}}@media(max-width:520px){.perks{grid-template-columns:1fr}}
+
+/* ---------- tienda ---------- */
+.shop .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.shop .pics{position:relative;height:520px}
+.shop .pics .ph{position:absolute}
+.shop .pics .a{width:56%;top:0;left:0;aspect-ratio:1/1.2;--r0:-3deg;transform:rotate(-3deg)}
+.shop .pics .b{width:54%;bottom:0;right:0;aspect-ratio:1/1.3;--r0:3deg;transform:rotate(3deg)}
+.shop h2{font-size:clamp(2.3rem,4.8vw,3.6rem);margin-bottom:20px}
+.shop h2 em{color:var(--coral)}
+.shop p{color:var(--mut);margin-bottom:14px}
+.ticks{list-style:none;margin:22px 0 30px;display:grid;gap:10px}
+.ticks li{display:flex;gap:12px;align-items:center;font-weight:500}
+.ticks li::before{content:"✓";display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--coral);color:#fff;font-size:.8rem;flex:none}
+@media(max-width:850px){.shop .wrap{grid-template-columns:1fr;gap:40px}.shop .pics{height:430px;max-width:440px;margin:0 auto;width:100%}}
+
+/* ---------- instagram ---------- */
+.ig{background:var(--ink);color:var(--cream)}
+.ig .head h2 em{color:var(--pink)}
+.ig .head p{color:#aeb6c8}
+.igr{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.igr a{aspect-ratio:3/4;border-radius:18px;overflow:hidden;position:relative;display:block}
+.igr img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.igr a::after{content:"♥";position:absolute;inset:0;display:grid;place-items:center;font-size:2rem;color:#fff;background:rgba(226,73,47,.75);opacity:0;transition:.35s}
+.igr a:hover::after{opacity:1}.igr a:hover img{transform:scale(1.12)}
+.ig .btn{border-color:var(--cream);color:var(--cream);margin-top:34px}
+.ig .btn:hover{background:var(--cream);color:var(--ink)}
+@media(max-width:900px){.igr{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- contacto ---------- */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;border-radius:32px;overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.contact .tx{padding:52px}
+.contact h2{font-size:clamp(2.2rem,4.4vw,3.2rem);margin-bottom:16px}
+.contact h2 em{color:var(--coral)}
+.contact .tx>p{color:var(--mut);margin-bottom:26px}
+.info{display:grid;gap:16px;margin-bottom:30px}
+.info div{display:flex;gap:14px;align-items:flex-start}
+.info i{font-style:normal;width:44px;height:44px;border-radius:14px;background:var(--sky);display:grid;place-items:center;font-size:1.2rem;flex:none}
+.info b{display:block;font-family:var(--hf);font-size:1.05rem}
+.info span{color:var(--mut);font-size:.92rem}
+.contact iframe{width:100%;height:100%;min-height:420px;border:0;filter:saturate(.85) contrast(.97)}
+@media(max-width:850px){.contact{grid-template-columns:1fr}.contact .tx{padding:30px 24px}.contact iframe{min-height:300px}}
+
+footer{padding:44px 0;border-top:1px solid var(--line);font-size:.9rem;color:var(--mut)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .logo{color:var(--ink)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(46px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:850px){
+  nav ul{display:none}
+  .navtg{display:block}
+  nav ul.open{display:flex;flex-direction:column;gap:0;position:absolute;top:calc(100% + 6px);left:12px;right:12px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:8px;box-shadow:0 24px 60px rgba(27,34,51,.2)}
+  nav ul.open a{display:block;padding:15px 18px;border-radius:14px}
+  nav ul.open a:hover{background:var(--sky)}
+  nav ul.open a::after{display:none}
+  section{padding:76px 0}
+}
+@media(max-width:560px){
+  .wrap{padding:0 18px}
+  .track{padding-left:18px;padding-right:18px;margin:0 -18px}
+  .logo{font-size:1.3rem}.logo b{height:34px;font-size:1rem}
+  nav .btn{padding:10px 16px;font-size:.82rem}
+  .hero{padding-top:110px;min-height:auto}
+  .hero h1{font-size:clamp(2.7rem,14vw,3.6rem)}
+  .cta .btn{flex:1 1 auto}
+  .st.s1{width:84px;height:84px;font-size:1.6rem}.st.s2{font-size:1.15rem;padding:9px 14px}.st.s3{width:72px;height:72px;left:0}
+  .marq div{font-size:1.4rem}
+  .arrows{display:none}
+  .contact .tx{padding:26px 20px}
+  .stk{gap:12px}
+}
+@media(max-width:360px){nav .navr .btn{display:none}}
+@media(max-width:340px){.cats{grid-template-columns:1fr}.cat{aspect-ratio:4/3.4}.stk div{font-size:2.2rem}.hero h1{font-size:2.4rem}}
+/* móvil en horizontal / pantallas bajas */
+@media(max-height:520px) and (orientation:landscape){
+  .hero{min-height:auto;padding:96px 0 48px}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.2rem)}
+  .hero p.sub{margin:14px 0 18px}.pills{margin-top:18px}
+  .tag{margin-bottom:14px}
+  nav ul.open{max-height:calc(100svh - 80px);overflow-y:auto}
+  section{padding:56px 0}
+}
+/* táctil: objetivos cómodos y sin efectos hover pegajosos */
+@media(hover:none){
+  .btn,.arrows button,.navtg{min-height:44px}
+  .cat:hover img,.card:hover img,.igr a:hover img{transform:none}
+  .perk:hover,.pills span:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a href="#" class="logo"><b>CRA</b>Moda</a>
+  <ul id="menu">
+    <li><a href="#coleccion">Colección</a></li>
+    <li><a href="#looks">Looks</a></li>
+    <li><a href="#promos">Promos</a></li>
+    <li><a href="#tienda">Tienda</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <div class="navr">
+    <a class="btn pri" href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener">Instagram</a>
+    <button class="navtg" id="tg" aria-label="Abrir menú" aria-expanded="false"><i></i></button>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="rv">
+      <div class="tag">Tienda multimarca · Cangas del Narcea</div>
+      <h1>Moda joven<br>con <em>estilo</em> <span class="u">propio</span></h1>
+      <p class="sub">Ropa, calzado, bolsos y accesorios de tus marcas favoritas, en un único lugar. Ven a probarte lo nuevo de temporada.</p>
+      <div class="cta">
+        <a href="#coleccion" class="btn pri">Ver colección
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener" class="btn">@c.r.a.moda</a>
+      </div>
+      <div class="pills"><span>Ropa joven</span><span>Calzado</span><span>Bolsos</span><span>Accesorios</span></div>
+    </div>
+
+    <div class="collage rv" id="collage">
+      <div class="ph p1" data-d="14"><img src="img/cra-moda/vestido.jpg" alt="Vestido estampado" ></div>
+      <div class="ph p2" data-d="-22"><img src="img/cra-moda/conjunto.jpg" alt="Conjunto vaquero con botines"></div>
+      <div class="ph p3" data-d="30"><img src="img/cra-moda/promo.jpg" alt="Promociones de temporada" style="object-position:center top"></div>
+      <div class="st s1" data-d="40"><div>-30%<small>este mes</small></div></div>
+      <div class="st s2" data-d="-30">Nueva temporada</div>
+      <div class="st s3" data-d="20">
+        <svg viewBox="0 0 100 100"><defs><path id="c" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+          <text font-family="Inter" font-weight="600" font-size="11.5" letter-spacing="3.2" fill="#1b2233"><textPath href="#c">MULTIMARCA · JOVEN · ACTUAL ·</textPath></text></svg>
+        <span>✺</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marqw"><div class="marq"><div>
+  <span>Ropa joven</span><span>Calzado</span><span>Bolsos</span><span>Accesorios</span><span>Multimarca</span><span>Cangas del Narcea</span>
+  <span>Ropa joven</span><span>Calzado</span><span>Bolsos</span><span>Accesorios</span><span>Multimarca</span><span>Cangas del Narcea</span>
+</div></div></div>
+
+<section id="coleccion">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Colección</span><h2>Todo para <em>tu armario</em></h2><p>De los básicos que no fallan a ese detalle que lo cambia todo.</p></div>
+    <div class="cats">
+      <a class="cat rv" href="#looks"><img loading="lazy" src="img/cra-moda/blazer.jpg" alt="Ropa"><div class="t"><div><h3>Ropa</h3><small>Vaqueros, vestidos, blazers…</small></div><span class="ar">→</span></div></a>
+      <a class="cat rv" href="#looks"><img loading="lazy" src="img/cra-moda/jeans.jpg" alt="Calzado" style="object-position:center 85%"><div class="t"><div><h3>Calzado</h3><small>Botines y más</small></div><span class="ar">→</span></div></a>
+      <a class="cat rv" href="#looks"><img loading="lazy" src="img/cra-moda/lino.jpg" alt="Bolsos"><div class="t"><div><h3>Bolsos</h3><small>Fibras y piel</small></div><span class="ar">→</span></div></a>
+      <a class="cat rv" href="#looks"><img loading="lazy" src="img/cra-moda/gafas.jpg" alt="Accesorios"><div class="t"><div><h3>Accesorios</h3><small>Gafas, collares…</small></div><span class="ar">→</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="looks" class="look">
+  <div class="wrap">
+    <div class="head row rv">
+      <div><span class="eyebrow">Looks</span><h2>Los que <em>nos encantan</em></h2></div>
+      <div class="arrows"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Siguiente">→</button></div>
+    </div>
+    <div class="track" id="track">
+      <div class="card"><span class="n">01</span><div class="im"><img loading="lazy" src="img/cra-moda/gafas.jpg" alt="Camisa vaquera"></div><h3>Total denim</h3><p>Camisa vaquera, siempre en tendencia.</p></div>
+      <div class="card"><span class="n">02</span><div class="im"><img loading="lazy" src="img/cra-moda/chaqueta.jpg" alt="Cazadora vaquera"></div><h3>Cazadora denim</h3><p>La que combina con todo.</p></div>
+      <div class="card"><span class="n">03</span><div class="im"><img loading="lazy" src="img/cra-moda/vestido.jpg" alt="Vestido estampado"></div><h3>Estampados de verano</h3><p>Vestidos con mucho movimiento.</p></div>
+      <div class="card"><span class="n">04</span><div class="im"><img loading="lazy" src="img/cra-moda/lino.jpg" alt="Lino y blanco"></div><h3>Lino y blanco</h3><p>Fresco, ligero y elegante.</p></div>
+      <div class="card"><span class="n">05</span><div class="im"><img loading="lazy" src="img/cra-moda/blanco.jpg" alt="Vestido blanco"></div><h3>Vestido blanco</h3><p>El básico de las vacaciones.</p></div>
+      <div class="card"><span class="n">06</span><div class="im"><img loading="lazy" src="img/cra-moda/mono.jpg" alt="Mono vaquero"></div><h3>Mono denim</h3><p>Un regalo perfecto para mamá.</p></div>
+      <div class="card"><span class="n">07</span><div class="im"><img loading="lazy" src="img/cra-moda/conjunto.jpg" alt="Conjunto vaquero con botines"></div><h3>Conjunto y botines</h3><p>Estilo sin esfuerzo.</p></div>
+      <div class="card"><span class="n">08</span><div class="im"><img loading="lazy" src="img/cra-moda/blazer.jpg" alt="Blazer azul"></div><h3>Blazer celeste</h3><p>Dale un aire nuevo a cualquier look.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="promos" class="promos">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow" style="color:#fff;opacity:.85">Promos</span>
+      <h2>Ofertas que <em>se acaban</em></h2>
+      <p>Rebajas, 2x1 y descuentos especiales durante todo el año. Las promos vigentes las anunciamos primero en nuestro Instagram.</p>
+      <div class="cta">
+        <a href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener" class="btn wh">Ver promos de hoy</a>
+        <a href="#contacto" class="btn">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="stk rv">
+      <div>2x1<small>Selección</small></div>
+      <div>-30%<small>Temporada</small></div>
+      <div>40%<small>Especiales</small></div>
+      <div>20%<small>Y mucho más</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Por qué CRA</span><h2>Más que <em>una tienda</em></h2></div>
+    <div class="perks">
+      <div class="perk rv"><div class="ic">🛍️</div><h3>Multimarca</h3><p>Varias marcas bajo el mismo techo para que encuentres tu estilo.</p></div>
+      <div class="perk rv"><div class="ic">💬</div><h3>Trato cercano</h3><p>Te aconsejamos con sinceridad y sin prisas.</p></div>
+      <div class="perk rv"><div class="ic">✨</div><h3>Siempre al día</h3><p>Novedades cada temporada: ropa, calzado, bolsos y accesorios.</p></div>
+      <div class="perk rv"><div class="ic">🎁</div><h3>Ideas de regalo</h3><p>Detalles para mamá, amigas y para ti.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tienda" class="shop" style="padding-top:20px">
+  <div class="wrap">
+    <div class="pics rv">
+      <div class="ph a"><img loading="lazy" src="img/cra-moda/shop1.jpg" alt="Interior de la tienda"></div>
+      <div class="ph b"><img loading="lazy" src="img/cra-moda/shop2.jpg" alt="Clientas en la puerta de la tienda"></div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Nuestra tienda</span>
+      <h2>Una tienda de siempre, <em>con estilo de ahora</em></h2>
+      <p>En CRA Moda nos gusta que vengas, te mires al espejo y salgas con ganas de estrenar. Aquí no hay prisas: hay probadores, buenos consejos y mucha moda por descubrir.</p>
+      <ul class="ticks"><li>Moda joven de marcas variadas</li><li>Calzado, bolsos y accesorios para completar el look</li><li>Atención personal en cada visita</li></ul>
+      <a href="#contacto" class="btn pri">Visítanos</a>
+    </div>
+  </div>
+</section>
+
+<section class="ig">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow" style="color:var(--pink)">Instagram</span><h2>Síguenos en <em>@c.r.a.moda</em></h2><p>Allí enseñamos cada novedad, cada promo y los looks de la semana.</p></div>
+    <div class="igr">
+      <a class="rv" href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener" aria-label="Ver en Instagram"><img loading="lazy" src="img/cra-moda/gafas.jpg" alt=""></a>
+      <a class="rv" href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener" aria-label="Ver en Instagram"><img loading="lazy" src="img/cra-moda/chaqueta.jpg" alt=""></a>
+      <a class="rv" href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener" aria-label="Ver en Instagram"><img loading="lazy" src="img/cra-moda/vestido.jpg" alt=""></a>
+      <a class="rv" href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener" aria-label="Ver en Instagram"><img loading="lazy" src="img/cra-moda/lino.jpg" alt=""></a>
+      <a class="rv" href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener" aria-label="Ver en Instagram"><img loading="lazy" src="img/cra-moda/blanco.jpg" alt=""></a>
+      <a class="rv" href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener" aria-label="Ver en Instagram"><img loading="lazy" src="img/cra-moda/mono.jpg" alt=""></a>
+    </div>
+    <a href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener" class="btn">Abrir Instagram →</a>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="contact rv">
+      <div class="tx">
+        <span class="eyebrow">Contacto</span>
+        <h2>Te esperamos en <em>Cangas del Narcea</em></h2>
+        <p>Pasa a vernos, pregúntanos por una prenda o escríbenos por Instagram y te respondemos encantadas.</p>
+        <div class="info">
+          <div><i>📍</i><p><b>Dónde estamos</b><span>Cangas del Narcea, Asturias</span></p></div>
+          <div><i>📸</i><p><b>Instagram</b><span>@c.r.a.moda · novedades, promos y horarios</span></p></div>
+        </div>
+        <div class="cta">
+          <a class="btn pri" href="https://www.instagram.com/c.r.a.moda/" target="_blank" rel="noopener">Escribir por Instagram</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=CRA+Moda+Cangas+del+Narcea" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+      <iframe title="Mapa de Cangas del Narcea" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Cangas+del+Narcea,+Asturias&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <a href="#" class="logo"><b>CRA</b>Moda</a>
+  <span>Tienda multimarca de ropa joven, calzado, bolsos y accesorios · Cangas del Narcea (Asturias)</span>
+  <span>© 2026 CRA Moda</span>
+</div></footer>
+
+<script>
+const nav=document.getElementById('nav'),menu=document.getElementById('menu'),tg=document.getElementById('tg');
+const onsc=()=>nav.classList.toggle('sc',scrollY>30);addEventListener('scroll',onsc,{passive:true});onsc();
+const closeM=()=>{menu.classList.remove('open');tg.classList.remove('on');tg.setAttribute('aria-expanded','false')};
+tg.onclick=()=>{const o=menu.classList.toggle('open');tg.classList.toggle('on',o);tg.setAttribute('aria-expanded',o)};
+menu.addEventListener('click',e=>{if(e.target.closest('a'))closeM()});
+addEventListener('resize',()=>{if(innerWidth>850)closeM()});
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+const rvs=[...document.querySelectorAll('.rv')];
+rvs.forEach((el,i)=>{el.style.transitionDelay=(i%4)*80+'ms';io.observe(el)});
+/* respaldo por si el observer no dispara (saltos de scroll, impresión…) */
+const chk=()=>rvs.forEach(el=>{if(!el.classList.contains('in')&&el.getBoundingClientRect().top<innerHeight*.96){el.classList.add('in');io.unobserve(el)}});
+addEventListener('scroll',chk,{passive:true});addEventListener('load',chk);setTimeout(chk,1200);
+
+/* parallax del collage */
+const col=document.getElementById('collage');
+if(col&&matchMedia('(hover:hover)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+  const ds=[...col.querySelectorAll('[data-d]')];
+  col.addEventListener('mousemove',e=>{const r=col.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    ds.forEach(el=>{const d=+el.dataset.d;el.style.translate=`${x*d}px ${y*d}px`})});
+  col.addEventListener('mouseleave',()=>ds.forEach(el=>el.style.translate=''));
+}
+
+/* lookbook: flechas + arrastre */
+const tr=document.getElementById('track'),step=()=>tr.querySelector('.card').offsetWidth+18;
+document.getElementById('next').onclick=()=>tr.scrollBy({left:step(),behavior:'smooth'});
+document.getElementById('prev').onclick=()=>tr.scrollBy({left:-step(),behavior:'smooth'});
+let down=false,sx=0,sl=0,moved=false;
+tr.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=tr.scrollLeft;tr.classList.add('drag')});
+addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-sx;if(Math.abs(dx)>3)moved=true;tr.scrollLeft=sl-dx});
+addEventListener('pointerup',()=>{if(!down)return;down=false;tr.classList.remove('drag')});
+</script>
+</body>
+</html>

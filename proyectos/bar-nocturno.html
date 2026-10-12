@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOCTURNO · Cocktail Bar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0920; --bg2:#150f35; --card:rgba(255,255,255,.05); --line:rgba(255,255,255,.12);
+  --txt:#f3f0ff; --mut:#a9a3cf; --or:#ffb23f; --or2:#ff7a3c; --pk:#ff4fa3; --pu:#6b4dff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.6}
+h1,h2,h3,.logo{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:110px 0;position:relative}
+
+/* fondo animado */
+.glow{position:fixed;inset:0;z-index:-1;overflow:hidden;background:radial-gradient(circle at 20% 0,#2a1a6e 0,transparent 55%),var(--bg)}
+.glow i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.45;animation:float 14s ease-in-out infinite}
+.glow i:nth-child(1){width:420px;height:420px;background:var(--pu);top:10%;left:-5%}
+.glow i:nth-child(2){width:360px;height:360px;background:var(--pk);top:55%;right:-8%;animation-delay:-5s;opacity:.3}
+.glow i:nth-child(3){width:300px;height:300px;background:var(--or2);bottom:-5%;left:35%;animation-delay:-9s;opacity:.22}
+@keyframes float{50%{transform:translate(50px,-60px) scale(1.15)}}
+
+/* nav */
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 14px 12px 20px;border:1px solid var(--line);border-radius:18px;background:rgba(15,10,40,.55);backdrop-filter:blur(16px);transition:.3s}
+nav.sc{background:rgba(15,10,40,.9);box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.logo{font-size:1.7rem;font-weight:800;display:flex;align-items:center;gap:10px}
+.logo b{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--or),var(--pk));font-size:1.2rem;color:#fff}
+nav ul{display:flex;gap:28px;list-style:none;font-size:.92rem;color:var(--mut);font-weight:500}
+nav ul a:hover{color:var(--or)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:14px;font-weight:600;font-size:.95rem;border:1px solid var(--line);background:var(--card);cursor:pointer;transition:.3s;color:var(--txt);font-family:inherit}
+.btn:hover{transform:translateY(-3px);border-color:var(--or)}
+.btn.pri{background:linear-gradient(135deg,var(--or),var(--or2));color:#1a0f00;border:0;box-shadow:0 8px 30px rgba(255,140,60,.4)}
+.btn.pri:hover{box-shadow:0 14px 40px rgba(255,140,60,.6)}
+@media(max-width:820px){nav ul{display:none}}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:130px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.tag{display:inline-flex;gap:8px;align-items:center;padding:7px 16px;border-radius:99px;border:1px solid rgba(255,178,63,.4);background:rgba(255,178,63,.08);color:var(--or);font-size:.82rem;font-weight:600;margin-bottom:24px}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--or);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,178,63,.7)}100%{box-shadow:0 0 0 12px transparent}}
+.hero h1{font-size:clamp(3.6rem,9vw,7.4rem);font-weight:800}
+.hero h1 span{background:linear-gradient(100deg,var(--or),var(--pk));-webkit-background-clip:text;color:transparent;display:block}
+.hero p{color:var(--mut);font-size:1.12rem;max-width:480px;margin:24px 0 34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.visual{position:relative}
+.visual .main{border-radius:28px;aspect-ratio:4/5;object-fit:cover;width:100%;border:1px solid var(--line);box-shadow:0 30px 80px rgba(107,77,255,.35);animation:bob 7s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-14px) rotate(-.6deg)}}
+.chip{position:absolute;padding:14px 18px;border-radius:18px;border:1px solid var(--line);background:rgba(20,14,55,.75);backdrop-filter:blur(14px);animation:bob 6s ease-in-out infinite}
+.chip small{display:block;color:var(--mut);font-size:.75rem}
+.chip strong{font-family:'Barlow Condensed';font-size:1.9rem;color:var(--or);line-height:1}
+.chip.a{left:-30px;bottom:14%;animation-delay:-2s}
+.chip.b{right:-18px;top:8%;animation-delay:-4s}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.chip.a{left:8px}.chip.b{right:8px}}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);background:rgba(255,255,255,.03);overflow:hidden;padding:18px 0}
+.marq div{display:flex;gap:50px;width:max-content;animation:mq 28s linear infinite;font-family:'Barlow Condensed';font-size:1.8rem;text-transform:uppercase;font-weight:700;color:var(--mut)}
+.marq span::after{content:"✦";color:var(--or);margin-left:50px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* titulos */
+.head{max-width:620px;margin-bottom:56px}
+.head h2{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800}
+.head h2 em{font-style:normal;color:var(--or)}
+.head p{color:var(--mut);margin-top:14px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{padding:26px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02))}
+.stat span{color:var(--mut);font-size:.9rem}
+.stat b{display:block;font-family:'Barlow Condensed';font-size:3.6rem;color:var(--or);line-height:1.1}
+@media(max-width:800px){.stats{grid-template-columns:1fr 1fr}}
+
+/* carta */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.drink{border-radius:26px;border:1px solid var(--line);background:linear-gradient(180deg,#221655,#150f35);overflow:hidden;transition:.4s;position:relative}
+.drink:hover{transform:translateY(-10px);border-color:var(--or);box-shadow:0 24px 60px rgba(107,77,255,.35)}
+.drink .im{height:250px;overflow:hidden}
+.drink img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.drink:hover img{transform:scale(1.12) rotate(1deg)}
+.drink .tx{padding:24px}
+.drink h3{font-size:1.9rem;display:flex;justify-content:space-between;align-items:baseline}
+.drink h3 b{color:var(--or)}
+.drink p{color:var(--mut);font-size:.92rem;margin-top:8px}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+
+/* galeria */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px}
+.gal div{border-radius:22px;overflow:hidden;position:relative;border:1px solid var(--line)}
+.gal div:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal div:nth-child(4){grid-column:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.gal div:hover img{transform:scale(1.1)}
+.gal div::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(12,9,32,.7));opacity:.7}
+@media(max-width:800px){.gal{grid-template-columns:1fr 1fr}.gal div:nth-child(n){grid-column:auto;grid-row:auto}}
+
+/* eventos */
+.ev{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.evc{padding:30px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(160deg,#2a1a6e55,#150f35);transition:.35s}
+.evc:hover{transform:translateY(-6px);border-color:var(--pk)}
+.evc .d{font-family:'Barlow Condensed';font-size:3.2rem;color:var(--pk);font-weight:800;line-height:1}
+.evc h3{font-size:1.7rem;margin:12px 0 8px}
+.evc p{color:var(--mut);font-size:.92rem}
+@media(max-width:900px){.ev{grid-template-columns:1fr}}
+
+/* reserva */
+.res{border-radius:34px;padding:56px;border:1px solid var(--line);background:linear-gradient(135deg,#3a22a0,#150f35 60%);display:grid;grid-template-columns:1fr 1fr;gap:44px;position:relative;overflow:hidden}
+.res::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:var(--or2);filter:blur(120px);opacity:.25;right:-80px;top:-100px}
+.res h2{font-size:clamp(2.6rem,5vw,4rem);font-weight:800}
+.res p{color:var(--mut);margin-top:14px}
+form{display:grid;gap:14px;position:relative}
+input,select{width:100%;padding:15px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(0,0,0,.28);color:var(--txt);font:inherit}
+input:focus,select:focus{outline:2px solid var(--or);border-color:transparent}
+form .r2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ok{display:none;color:var(--or);font-weight:600}
+@media(max-width:850px){.res{grid-template-columns:1fr;padding:30px}}
+
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(44px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+/*resp*/
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+.navtg{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line,rgba(255,255,255,.2));background:var(--card,rgba(255,255,255,.08));cursor:pointer;flex:none;position:relative}
+.navtg i,.navtg i::before,.navtg i::after{position:absolute;left:12px;width:20px;height:2px;border-radius:2px;background:var(--txt,#fff);transition:.3s;content:""}
+.navtg i{top:21px}.navtg i::before{top:-6px;left:0}.navtg i::after{top:6px;left:0}
+.navtg.on i{background:transparent}.navtg.on i::before{top:0;transform:rotate(45deg)}.navtg.on i::after{top:0;transform:rotate(-45deg)}
+@media(max-width:850px){
+ .navtg{display:block}
+ nav{gap:10px}
+ nav ul.open{display:flex!important;flex-direction:column;gap:0!important;position:absolute;top:calc(100% + 8px);left:12px;right:12px;background:var(--bg);color:var(--mut)!important;border:1px solid var(--line,rgba(255,255,255,.15));border-radius:18px;padding:8px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+ nav ul.open a{display:block;padding:14px 16px;border-radius:12px;color:var(--txt)}
+ nav ul.open a:hover{background:var(--card)}
+ .band,.hero .bg{background-attachment:scroll!important}
+ section{padding-top:72px!important;padding-bottom:72px!important}
+}
+@media(max-width:560px){
+ .wrap{padding-left:18px!important;padding-right:18px!important}
+ nav .btn{padding:10px 14px!important;font-size:.8rem!important}
+ .logo{font-size:1.35rem!important}
+ .logo b{width:32px!important;height:32px!important}
+ h1{font-size:clamp(2.5rem,13vw,3.4rem)!important;word-break:break-word}
+ h2{font-size:clamp(2rem,9.5vw,2.8rem)!important}
+ .hero{padding-top:110px!important;min-height:auto!important}
+ .btn{padding:12px 20px}
+ .cta .btn{flex:1 1 auto;justify-content:center}
+ .res,.quote .fm,.book .fm,.contact .fm{padding:24px!important}
+ .res{border-radius:24px!important}
+ .band{height:300px}
+ .chip,.badge{padding:10px 14px}
+ .nums{gap:22px!important}
+ .search{max-width:100%}
+ #toast{left:16px;right:16px;bottom:16px;text-align:center}
+}
+@media(max-width:360px){nav .btn{display:none!important}}
+</style>
+</head>
+<body>
+<div class="glow"><i></i><i></i><i></i></div>
+
+<nav id="nav">
+  <a href="#" class="logo"><b>N</b>Nocturno</a>
+  <ul><li><a href="#carta">Carta</a></li><li><a href="#ambiente">Ambiente</a></li><li><a href="#eventos">Eventos</a></li><li><a href="#reserva">Reservas</a></li></ul>
+  <a href="#reserva" class="btn pri">Reservar mesa</a>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="rv">
+      <div class="tag">Abierto hoy hasta las 03:00</div>
+      <h1>La noche<span>empieza aquí</span></h1>
+      <p>Coctelería de autor, música en directo y un ambiente que no se apaga. Bienvenido al bar donde cada copa cuenta una historia.</p>
+      <div class="cta"><a href="#reserva" class="btn pri">Reservar mesa →</a><a href="#carta" class="btn">Ver la carta</a></div>
+    </div>
+    <div class="visual rv">
+      <img class="main" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80" alt="Cóctel de autor">
+      <div class="chip a"><small>Cócteles en carta</small><strong>42</strong></div>
+      <div class="chip b"><small>Valoración media</small><strong>4.9 ★</strong></div>
+    </div>
+  </div>
+</header>
+
+<div class="marq"><div>
+  <span>Cócteles de autor</span><span>Música en vivo</span><span>Happy hour 18–21h</span><span>Gin &amp; tonics premium</span><span>Terraza nocturna</span>
+  <span>Cócteles de autor</span><span>Música en vivo</span><span>Happy hour 18–21h</span><span>Gin &amp; tonics premium</span><span>Terraza nocturna</span>
+</div></div>
+
+<section>
+  <div class="wrap stats">
+    <div class="stat rv"><span>Años abiertos</span><b data-n="12">0</b></div>
+    <div class="stat rv"><span>Cócteles servidos / noche</span><b data-n="380">0</b></div>
+    <div class="stat rv"><span>Conciertos al año</span><b data-n="96">0</b></div>
+    <div class="stat rv"><span>Clientes felices</span><b data-n="25000" data-s="+">0</b></div>
+  </div>
+</section>
+
+<section id="carta">
+  <div class="wrap">
+    <div class="head rv"><h2>Nuestra <em>carta</em> estrella</h2><p>Ingredientes frescos, técnica clásica y un toque de locura. Estos son los favoritos de la casa.</p></div>
+    <div class="cards">
+      <article class="drink rv"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Sunset Negroni"></div><div class="tx"><h3>Sunset Negroni <b>11€</b></h3><p>Gin ahumado, vermut rojo, bitter y naranja flambeada.</p></div></article>
+      <article class="drink rv"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?auto=format&fit=crop&w=800&q=80" alt="Violet Fizz"></div><div class="tx"><h3>Violet Fizz <b>10€</b></h3><p>Ginebra de violeta, limón, espuma de frambuesa y burbujas.</p></div></article>
+      <article class="drink rv"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1575444758702-4a6b9222336e?auto=format&fit=crop&w=800&q=80" alt="Cervezas artesanas"></div><div class="tx"><h3>Craft Corner <b>5€</b></h3><p>12 grifos de cerveza artesana local rotando cada semana.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="ambiente">
+  <div class="wrap">
+    <div class="head rv"><h2>Un <em>ambiente</em> con carácter</h2><p>Luces cálidas, barra de madera y los mejores vinilos de la ciudad.</p></div>
+    <div class="gal">
+      <div class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1000&q=80" alt="Interior del bar"></div>
+      <div class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=600&q=80" alt="Barra"></div>
+      <div class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=600&q=80" alt="Copas"></div>
+      <div class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?auto=format&fit=crop&w=1000&q=80" alt="Neón"></div>
+    </div>
+  </div>
+</section>
+
+<section id="eventos">
+  <div class="wrap">
+    <div class="head rv"><h2>Esta <em>semana</em></h2></div>
+    <div class="ev">
+      <div class="evc rv"><div class="d">JUE</div><h3>Jazz &amp; Gin</h3><p>Cuarteto en directo desde las 22:00. Entrada libre con consumición.</p></div>
+      <div class="evc rv"><div class="d">VIE</div><h3>DJ Sessions</h3><p>House y disco hasta que el cuerpo aguante. Lista abierta hasta la 1:00.</p></div>
+      <div class="evc rv"><div class="d">SÁB</div><h3>Noche de Cócteles</h3><p>2x1 en cócteles de autor durante la primera hora.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reserva">
+  <div class="wrap">
+    <div class="res rv">
+      <div><h2>Reserva tu <span style="color:var(--or)">mesa</span></h2><p>Grupos, cumpleaños o simplemente una copa tranquila. Te confirmamos en minutos.</p></div>
+      <form id="f">
+        <input required placeholder="Tu nombre">
+        <div class="r2"><input required type="date"><select><option>20:00</option><option>21:00</option><option>22:00</option><option>23:00</option></select></div>
+        <select><option>2 personas</option><option>4 personas</option><option>6 personas</option><option>8+ personas</option></select>
+        <button class="btn pri" type="submit">Confirmar reserva</button>
+        <div class="ok" id="ok">¡Reserva enviada! Te escribimos enseguida ✨</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><a href="#" class="logo"><b>N</b>Nocturno</a><span>Calle Mayor 24 · Abierto de 18:00 a 03:00</span><span>© 2026 Nocturno Bar</span></div></footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>30));
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add('in');
+  const c=e.target.querySelector('[data-n]');
+  if(c){const t=+c.dataset.n,s=c.dataset.s||'',st=performance.now();
+    (function k(n){const p=Math.min((n-st)/1600,1);c.textContent=Math.round(t*(1-Math.pow(1-p,3))).toLocaleString('es')+s;if(p<1)requestAnimationFrame(k)})(st)}
+  io.unobserve(e.target)}),{threshold:.15});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').style.display='block';e.target.reset()});
+</script>
+<script>/*resp*/(function(){var n=document.querySelector('nav'),u=n&&n.querySelector('ul');if(!u)return;
+var b=document.createElement('button');b.className='navtg';b.setAttribute('aria-label','Menú');b.innerHTML='<i></i>';
+(n.querySelector('.wrap')||n).appendChild(b);
+function c(){u.classList.remove('open');b.classList.remove('on')}
+b.onclick=function(){var o=u.classList.toggle('open');b.classList.toggle('on',o)};
+u.addEventListener('click',function(e){if(e.target.closest('a'))c()});
+addEventListener('resize',function(){if(innerWidth>850)c()})})();</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "updated": "2026-10-12",
+  "count": 9,
+  "projects": [
+    "cra-moda",
+    "moda-mujer-aura",
+    "moda-senora-clasica",
+    "moda-tradicional-raiz",
+    "restaurante-brasa",
+    "bar-nocturno",
+    "textil-hogar-hilo",
+    "bazar-regalos-sorpresa",
+    "calzado-paso-firme"
+  ]
+}

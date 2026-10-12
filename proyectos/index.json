@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "updated": "2026-10-12",
+  "count": 9,
+  "generated": "2026-10-12T18:10:00.078Z",
+  "projects": [
+    {
+      "meta": {
+        "slug": "cra-moda",
+        "title": "CRA Moda",
+        "tagline": "Moda joven en Cangas del Narcea",
+        "category": "Moda",
+        "subcategory": "Moda joven multimarca",
+        "icon": "🧢",
+        "accent": "#2f5f9e",
+        "accent2": "#e2492f",
+        "theme": "light",
+        "page": "cra-moda.html",
+        "location": "Cangas del Narcea, Asturias",
+        "schedule": "Consulta horarios en Instagram @c.r.a.moda",
+        "summary": "Tienda multimarca de ropa joven, calzado, bolsos y accesorios en Cangas del Narcea, con novedades y promos cada temporada.",
+        "tags": [
+          "moda joven",
+          "multimarca",
+          "calzado",
+          "bolsos",
+          "accesorios",
+          "Cangas del Narcea"
+        ],
+        "highlights": [
+          "Ropa joven, calzado, bolsos y accesorios en un mismo sitio",
+          "Selección multimarca con las tendencias de temporada",
+          "Novedades y promos al día en Instagram",
+          "Tienda física en Cangas del Narcea (Asturias)"
+        ],
+        "stats": [],
+        "hasHtml": true
+      },
+      "body": "\n# CRA Moda · Moda joven en Cangas del Narcea\n\nTienda multimarca de ropa joven, calzado, bolsos y accesorios en Cangas del Narcea (Asturias). Prendas con estilo propio para vestir de arriba abajo sin salir del pueblo.\n\n## Lo que encontrarás\n\n- **Ropa joven** — Blazers, chaquetas, jeans, monos, vestidos y conjuntos.\n- **Calzado** — Selección multimarca de temporada.\n- **Bolsos** — Para completar cada look.\n- **Accesorios** — Gafas y detalles que rematan el outfit.\n\n## Por qué venir\n\n- Para ver y probar las prendas en tienda, con trato cercano.\n- Por la variedad multimarca en un solo local.\n- Para enterarte antes de novedades y promos en Instagram.\n\n## Ficha técnica\n\n- **Categoría:** Moda\n- **Subcategoría:** Moda joven multimarca\n- **Dirección:** Cangas del Narcea, Asturias\n- **Instagram:** [@c.r.a.moda](https://www.instagram.com/c.r.a.moda/)\n"
+    },
+    {
+      "meta": {
+        "slug": "moda-mujer-aura",
+        "title": "Aura Moda",
+        "tagline": "Boutique de moda mujer",
+        "category": "Moda",
+        "subcategory": "Boutique moda mujer",
+        "icon": "👗",
+        "accent": "#d4577a",
+        "accent2": "#f08a6e",
+        "theme": "light",
+        "page": "moda-mujer-aura.html",
+        "location": "Calle Mayor 12",
+        "schedule": "L–S 10:00–20:00",
+        "summary": "Moda actual para mujer con prendas que sientan bien, duran y se combinan con todo. Asesoramiento personal en tienda.",
+        "tags": [
+          "moda mujer",
+          "boutique",
+          "vestidos",
+          "blusas",
+          "asesoría",
+          "tallas"
+        ],
+        "highlights": [
+          "Tallas de la 34 a la 54 con buen corte",
+          "Colección exclusiva de piezas únicas",
+          "Envoltorio regalo sin coste extra",
+          "Cambios fáciles durante 30 días"
+        ],
+        "stats": [
+          {
+            "label": "años vistiéndote",
+            "value": "18"
+          },
+          {
+            "label": "clientas",
+            "value": "5.000+"
+          },
+          {
+            "label": "clientes que repiten",
+            "value": "98%"
+          }
+        ],
+        "hasHtml": true
+      },
+      "body": "\n# Aura Moda · Boutique de moda mujer\n\nSomos una tienda de barrio que cree en vestir bien sin complicaciones. En Aura Moda elegimos cada prenda pensando en nuestras clientas, buscando que sienten bien, duren y se combinen con todo.\n\nTe recibimos con un café y te ayudamos a encontrar justo lo que buscas, con asesoramiento personal y sin prisas. Cada semana llegan prendas nuevas a la colección.\n\n## Lo que encontrarás\n\n- **Vestidos** — Fluidos, midi y de fiesta. Desde 39,90 €\n- **Blusas y camisas** — Tejidos suaves y cortes favorecedores. Desde 24,90 €\n- **Abrigos** — Calidad para varias temporadas. Desde 69,00 €\n- **Básicos** — La base perfecta de tu armario. Desde 14,90 €\n- **Looks completos** — Te lo dejamos montado. Desde 59,90 €\n- **Accesorios** — Bolsos, pañuelos y bisutería. Desde 9,90 €\n\n## Por qué venir\n\n- Por el asesoramiento personal y el trato cercano de una tienda de barrio.\n- Porque vestimos a todas las clientas, de la talla 34 a la 54, con buen corte.\n- Por la colección exclusiva y el envoltorio regalo cuidado, sin coste extra.\n\n## Una voz del local\n\n> \"Prendas preciosas y un trato inmejorable.\"\n> — María\n\n## Ficha técnica\n\n- **Categoría:** Moda\n- **Subcategoría:** Boutique moda mujer\n- **Dirección:** Calle Mayor 12\n- **Horario:** L–S 10:00–20:00\n"
+    },
+    {
+      "meta": {
+        "slug": "moda-senora-clasica",
+        "title": "Casa Distinguida",
+        "tagline": "Moda señora",
+        "category": "Moda",
+        "subcategory": "Moda señora clásica",
+        "icon": "🧥",
+        "accent": "#d9b45f",
+        "accent2": "#f1d68e",
+        "theme": "dark",
+        "page": "moda-senora-clasica.html",
+        "location": "Avenida de la Constitución 5",
+        "schedule": "L–S 10:00–14:00 y 17:00–20:30",
+        "summary": "Prendas clásicas de calidad, cómodas y con estilo para la mujer que sabe lo que quiere. Arreglos y ajustes incluidos.",
+        "tags": [
+          "moda señora",
+          "clásica",
+          "arreglos",
+          "tallas especiales",
+          "bodas",
+          "calidad"
+        ],
+        "highlights": [
+          "Arreglos y ajustes incluidos a tu medida",
+          "Tallas especiales con corte cómodo",
+          "Trato cercano, con tiempo y sin prisas",
+          "Conjuntos para bodas y celebraciones"
+        ],
+        "stats": [
+          {
+            "label": "años de oficio",
+            "value": "32"
+          },
+          {
+            "label": "clientas",
+            "value": "7.000+"
+          },
+          {
+            "label": "arreglos propios",
+            "value": "100%"
+          }
+        ],
+        "hasHtml": true
+      },
+      "body": "\n# Casa Distinguida · Moda señora\n\nMás de tres décadas vistiendo a la mujer con estilo propio. En Casa Distinguida apostamos por la calidad y por una atención de las de antes, con tejidos nobles y cortes cómodos que favorecen.\n\nCada clienta es única, y así la tratamos: te asesoramos con sinceridad, ajustamos la prenda a tu medida y preparamos conjuntos para bodas y celebraciones especiales.\n\n## Lo que encontrarás\n\n- **Conjuntos** — Dos piezas listas para lucir. Desde 79,00 €\n- **Chaquetas** — Estructuradas y ligeras. Desde 59,00 €\n- **Vestidos de vestir** — Para eventos y celebraciones. Desde 89,00 €\n- **Punto y jerséis** — Suaves y cálidos. Desde 34,90 €\n- **Pantalones** — Comodidad con elegancia. Desde 39,90 €\n- **Complementos** — Pañuelos, bolsos y más. Desde 12,90 €\n\n## Por qué venir\n\n- Por la experiencia de más de 30 años y el trato cercano de las de antes.\n- Porque ajustamos cada prenda a tu medida, con arreglos propios incluidos.\n- Por las tallas especiales y los conjuntos para bodas y celebraciones.\n\n## Una voz del local\n\n> \"Me arreglaron el vestido en un día.\"\n> — Rosa\n\n## Ficha técnica\n\n- **Categoría:** Moda\n- **Subcategoría:** Moda señora clásica\n- **Dirección:** Avenida de la Constitución 5\n- **Horario:** L–S 10:00–14:00 y 17:00–20:30\n"
+    },
+    {
+      "meta": {
+        "slug": "moda-tradicional-raiz",
+        "title": "Raíz Norte",
+        "tagline": "Moda y complementos regionales",
+        "category": "Moda",
+        "subcategory": "Moda tradicional raíz",
+        "icon": "🧵",
+        "accent": "#3f7a4a",
+        "accent2": "#b8863b",
+        "theme": "light",
+        "page": "moda-tradicional-raiz.html",
+        "location": "Plaza Vieja 3",
+        "schedule": "L–S 10:00–20:00",
+        "summary": "Prendas y complementos inspirados en la tradición, con diseño actual y materiales naturales de proximidad.",
+        "tags": [
+          "moda tradicional",
+          "lana",
+          "lino",
+          "artesanía local",
+          "fibras naturales",
+          "edición limitada"
+        ],
+        "highlights": [
+          "Fibras naturales: lana, lino y algodón",
+          "Artesanía local con talleres de la zona",
+          "Envíos a todo el país con embalaje reciclado",
+          "Producción justa en pequeñas series"
+        ],
+        "stats": [
+          {
+            "label": "talleres aliados",
+            "value": "12"
+          },
+          {
+            "label": "diseños únicos",
+            "value": "200+"
+          },
+          {
+            "label": "años creando",
+            "value": "15"
+          }
+        ],
+        "hasHtml": true
+      },
+      "body": "\n# Raíz Norte · Moda y complementos regionales\n\nNacimos para dar valor a la tradición textil de nuestra región, con diseños que se pueden llevar cada día. En Raíz Norte trabajamos con talleres cercanos y materiales de proximidad, en pequeñas series sin excesos.\n\nCada prenda cuenta de dónde viene: lana, lino y algodón de calidad, confeccionados con cariño y pensados para durar.\n\n## Lo que encontrarás\n\n- **Chaquetas de lana** — Abrigo auténtico y cálido. Desde 89,00 €\n- **Chales y bufandas** — Tejidos suaves. Desde 29,90 €\n- **Camisas de lino** — Frescas y ligeras. Desde 44,90 €\n- **Faldas y vestidos** — Diseño de inspiración regional. Desde 54,90 €\n- **Looks de temporada** — Combinados listos. Desde 79,00 €\n- **Complementos** — Detalles que marcan la diferencia. Desde 14,90 €\n\n## Por qué venir\n\n- Por la moda con raíces: fibras naturales y diseño de inspiración regional.\n- Porque colaboramos con talleres artesanos locales y producimos en series justas.\n- Por las piezas únicas, perfectas para regalar algo auténtico.\n\n## Una voz del local\n\n> \"Me encanta llevar algo de mi tierra.\"\n> — Sofía\n\n## Ficha técnica\n\n- **Categoría:** Moda\n- **Subcategoría:** Moda tradicional raíz\n- **Dirección:** Plaza Vieja 3\n- **Horario:** L–S 10:00–20:00\n"
+    },
+    {
+      "meta": {
+        "slug": "restaurante-brasa",
+        "title": "Brasa & Sal",
+        "tagline": "Restaurante",
+        "category": "Restauración",
+        "subcategory": "Brasería",
+        "icon": "🔥",
+        "accent": "#e8b960",
+        "accent2": "#d9482b",
+        "theme": "dark",
+        "page": "restaurante-brasa.html",
+        "location": "Plaza del Mercado 8",
+        "schedule": "Mar–Dom 13:00–23:30",
+        "summary": "Producto de temporada, carnes maduradas y arroces al punto. Una mesa para quedarse horas.",
+        "tags": [
+          "brasa",
+          "parrilla",
+          "carne madurada",
+          "arroces",
+          "proveedores locales",
+          "cocina de fuego"
+        ],
+        "highlights": [
+          "Cocina con brasas de encina",
+          "Producto de temporada y proveedores locales",
+          "Carnes maduradas y arroces al punto",
+          "Reservas con confirmación rápida"
+        ],
+        "stats": [
+          {
+            "label": "años de oficio",
+            "value": "15"
+          },
+          {
+            "label": "productores locales",
+            "value": "40"
+          },
+          {
+            "label": "clientes que repiten",
+            "value": "98%"
+          }
+        ],
+        "hasHtml": true
+      },
+      "body": "\n# Brasa & Sal · Restaurante\n\nEmpezamos con una parrilla de leña y una idea sencilla: cocinar el mejor producto sin esconderlo. Hoy seguimos fieles a ella, con proveedores locales y recetas de siempre.\n\nCada plato pasa por nuestras brasas de encina. Sin prisas, sin trucos: producto de temporada, carnes maduradas y arroces al punto en una mesa para quedarse horas.\n\n## Lo que encontrarás\n\n- **Chuletón madurado** — 45 días de maduración, sal en escamas y pimientos de la huerta. 28 €\n- **Verduras a la brasa** — Hortalizas de temporada con romesco ahumado y almendra tostada. 14 €\n- **Pizza de leña** — Masa de 48 horas, tomate San Marzano y mozzarella fresca. 13 €\n- **Costilla glaseada** — Cocción lenta 12 horas y acabado a la brasa con miel y romero. 19 €\n- **Ensalada de la casa** — Hojas tiernas, queso curado, higos y vinagreta de miel. 12 €\n- **Pasta fresca del día** — Hecha cada mañana, con salsa lenta de tomate y albahaca. 15 €\n\n## Por qué venir\n\n- Por la cocina de fuego honesta, con brasas de encina y producto de temporada.\n- Por las carnes maduradas y los arroces al punto, con 40 productores locales.\n- Por el ambiente cálido y una mesa donde quedarse horas hasta la medianoche.\n\n## Una voz del local\n\n> \"La mejor carne que he probado en años. El servicio, impecable y muy cercano.\"\n> — Laura M.\n\n## Ficha técnica\n\n- **Categoría:** Restauración\n- **Subcategoría:** Brasería\n- **Dirección:** Plaza del Mercado 8\n- **Horario:** Mar–Dom 13:00–23:30\n"
+    },
+    {
+      "meta": {
+        "slug": "bar-nocturno",
+        "title": "Nocturno",
+        "tagline": "Cocktail Bar",
+        "category": "Ocio nocturno",
+        "subcategory": "Cocktail bar",
+        "icon": "🍸",
+        "accent": "#ffb23f",
+        "accent2": "#ff4fa3",
+        "theme": "dark",
+        "page": "bar-nocturno.html",
+        "location": "Calle Mayor 24",
+        "schedule": "Abierto de 18:00 a 03:00",
+        "summary": "Coctelería de autor, música en directo y un ambiente que no se apaga. Bienvenido al bar donde cada copa cuenta una historia.",
+        "tags": [
+          "coctelería",
+          "cócteles de autor",
+          "música en directo",
+          "happy hour",
+          "gin tonics",
+          "terraza nocturna"
+        ],
+        "highlights": [
+          "42 cócteles de autor en carta",
+          "Música en directo (jazz, DJ, noches temáticas)",
+          "Happy hour de 18:00 a 21:00 h",
+          "12 grifos de cerveza artesana local"
+        ],
+        "stats": [
+          {
+            "label": "Años abiertos",
+            "value": "12"
+          },
+          {
+            "label": "Cócteles servidos / noche",
+            "value": "380"
+          },
+          {
+            "label": "Conciertos al año",
+            "value": "96"
+          },
+          {
+            "label": "Clientes felices",
+            "value": "25.000+"
+          }
+        ],
+        "hasHtml": true
+      },
+      "body": "\n# Nocturno · Cocktail Bar\n\nCoctelería de autor, música en directo y un ambiente que no se apaga. En Nocturno cada copa cuenta una historia, con ingredientes frescos, técnica clásica y un toque de locura.\n\nLuces cálidas, barra de madera y los mejores vinilos de la ciudad. Una carta de 42 cócteles que rota con las estaciones y una terraza nocturna para disfrutar hasta la madrugada.\n\n## Lo que encontrarás\n\n- **Sunset Negroni** — Gin ahumado, vermut rojo, bitter y naranja flambeada. 11 €\n- **Violet Fizz** — Ginebra de violeta, limón, espuma de frambuesa y burbujas. 10 €\n- **Craft Corner** — 12 grifos de cerveza artesana local rotando cada semana. 5 €\n- **Jazz & Gin (jueves)** — Cuarteto en directo desde las 22:00. Entrada libre con consumición.\n- **DJ Sessions (viernes)** — House y disco hasta que el cuerpo aguante. Lista abierta hasta la 1:00.\n- **Noche de Cócteles (sábados)** — 2x1 en cócteles de autor durante la primera hora.\n\n## Por qué venir\n\n- Por los 42 cócteles de autor y los 12 grifos de cerveza artesana local.\n- Por la música en directo cada semana: jazz los jueves y DJ sessions los viernes.\n- Por el ambiente con carácter y la terraza nocturna abierta hasta las 03:00.\n\n## Una voz del local\n\n> \"Coctelería de autor, música en directo y un ambiente que no se apaga.\"\n> — Nocturno (presentación del local)\n\n## Ficha técnica\n\n- **Categoría:** Ocio nocturno\n- **Subcategoría:** Cocktail bar\n- **Dirección:** Calle Mayor 24\n- **Horario:** Abierto de 18:00 a 03:00\n"
+    },
+    {
+      "meta": {
+        "slug": "textil-hogar-hilo",
+        "title": "Hilo & Hogar",
+        "tagline": "Textil hogar y mercería",
+        "category": "Hogar",
+        "subcategory": "Textil hogar",
+        "icon": "🛋️",
+        "accent": "#c0623a",
+        "accent2": "#d9a066",
+        "theme": "light",
+        "page": "textil-hogar-hilo.html",
+        "location": "Calle del Telar 4",
+        "schedule": "L–S 10:00–20:00",
+        "summary": "Ropa de cama, toallas, cortinas, manteles y todo lo necesario para coser y crear. Textil de calidad al mejor precio.",
+        "tags": [
+          "textil hogar",
+          "ropa de cama",
+          "cortinas a medida",
+          "mercería",
+          "toallas",
+          "manteles"
+        ],
+        "highlights": [
+          "Ropa de cama en algodón, lino y percal",
+          "Cortinas confeccionadas a medida en taller",
+          "Mercería completa: hilos, botones y lanas",
+          "Asesoría deco de colores y texturas"
+        ],
+        "stats": [
+          {
+            "label": "años en el barrio",
+            "value": "40"
+          },
+          {
+            "label": "tejidos y colores",
+            "value": "80+"
+          },
+          {
+            "label": "cortinas hechas",
+            "value": "2.000+"
+          }
+        ],
+        "hasHtml": true
+      },
+      "body": "\n# Hilo & Hogar · Textil hogar y mercería\n\nSomos una casa familiar de textil y mercería. En Hilo & Hogar aconsejamos con paciencia y cosemos lo que haga falta para que todo quede perfecto.\n\nSi lo imaginas, lo hacemos a medida: ropa de cama, toallas, cortinas, manteles y todo lo necesario para coser y crear, con textil de calidad al mejor precio.\n\n## Lo que encontrarás\n\n- **Juegos de cama** — Suaves y fáciles de lavar. Desde 29,90 €\n- **Toallas** — Absorbentes y esponjosas. Desde 8,90 €\n- **Cortinas** — Confección a medida. Desde 24,90 €\n- **Cojines y plaids** — Un toque de calidez. Desde 9,90 €\n- **Manteles y cocina** — Colores para la mesa. Desde 12,90 €\n- **Mercería** — Hilos, agujas y lanas. Desde 1,50 €\n\n## Por qué venir\n\n- Por las cortinas a medida, confeccionadas en nuestro propio taller.\n- Por la mercería completa y el surtido de tejidos y colores.\n- Por los 40 años en el barrio y el asesoramiento deco con paciencia.\n\n## Una voz del local\n\n> \"Cortinas perfectas y puntuales.\"\n> — Ramón\n\n## Ficha técnica\n\n- **Categoría:** Hogar\n- **Subcategoría:** Textil hogar\n- **Dirección:** Calle del Telar 4\n- **Horario:** L–S 10:00–20:00\n"
+    },
+    {
+      "meta": {
+        "slug": "bazar-regalos-sorpresa",
+        "title": "Rincón Sorpresa",
+        "tagline": "Regalos, hogar y decoración",
+        "category": "Bazar",
+        "subcategory": "Bazar y regalos",
+        "icon": "🎁",
+        "accent": "#7c4dff",
+        "accent2": "#ff6b6b",
+        "theme": "light",
+        "page": "bazar-regalos-sorpresa.html",
+        "location": "Calle Mayor 30",
+        "schedule": "L–S 9:30–20:30",
+        "summary": "Regalos originales, decoración, menaje y mil cosas útiles para tu casa. Envuelto gratis y listo para sorprender.",
+        "tags": [
+          "regalos",
+          "decoración",
+          "menaje",
+          "velas",
+          "juguetes",
+          "papelería"
+        ],
+        "highlights": [
+          "Envoltorio gratis y cuidado",
+          "Decoración para cada rincón",
+          "Ideas útiles para la casa",
+          "Todo para fiestas y celebraciones"
+        ],
+        "stats": [
+          {
+            "label": "años regalando",
+            "value": "20"
+          },
+          {
+            "label": "artículos",
+            "value": "5.000+"
+          },
+          {
+            "label": "sonrisas",
+            "value": "100%"
+          }
+        ],
+        "hasHtml": true
+      },
+      "body": "\n# Rincón Sorpresa · Regalos, hogar y decoración\n\nSomos la tienda a la que vas cuando no sabes qué regalar… y te vas con la idea perfecta. En Rincón Sorpresa cada cliente recibe atención y envoltorio cuidado, listo para sorprender.\n\nCambiamos escaparate cada semana: regalos originales, decoración, menaje, velas, juguetes y papelería. Más de 5.000 artículos para todas las edades y bolsillos.\n\n## Lo que encontrarás\n\n- **Regalos originales** — Para todas las edades. Desde 4,90 €\n- **Decoración** — Cuadros, velas y jarrones. Desde 7,90 €\n- **Menaje de cocina** — Útil y bonito. Desde 3,90 €\n- **Cajas y detalles** — Para sorprender. Desde 5,90 €\n- **Papelería y fiesta** — Todo para celebrar. Desde 1,90 €\n- **Plantas y macetas** — Un toque verde. Desde 6,90 €\n\n## Por qué venir\n\n- Porque te ayudamos a encontrar el regalo perfecto aunque no sepas por dónde empezar.\n- Por el envoltorio gratis y cuidado, sin coste extra.\n- Por el surtido de 5.000+ artículos y los buenos precios.\n\n## Una voz del local\n\n> \"Un sitio mágico para regalar.\"\n> — Cristina\n\n## Ficha técnica\n\n- **Categoría:** Bazar\n- **Subcategoría:** Bazar y regalos\n- **Dirección:** Calle Mayor 30\n- **Horario:** L–S 9:30–20:30\n"
+    },
+    {
+      "meta": {
+        "slug": "calzado-paso-firme",
+        "title": "Paso Firme",
+        "tagline": "Calzado para toda la familia",
+        "category": "Calzado",
+        "subcategory": "Calzado familiar",
+        "icon": "👞",
+        "accent": "#c6ff3d",
+        "accent2": "#ff7a2f",
+        "theme": "dark",
+        "page": "calzado-paso-firme.html",
+        "location": "Calle del Comercio 9",
+        "schedule": "L–S 9:30–20:00",
+        "summary": "Zapatillas, botas, zapatos y sandalias para toda la familia. Comodidad probada y marcas para cada bolsillo.",
+        "tags": [
+          "calzado",
+          "zapatillas",
+          "running",
+          "zapatos vestir",
+          "botas",
+          "sandalias"
+        ],
+        "highlights": [
+          "Te medimos el pie y te asesoramos",
+          "Tallas del 17 al 48",
+          "Cambio en 30 días si no te convence",
+          "Arreglo de calzado: suelas, tacones y más"
+        ],
+        "stats": [
+          {
+            "label": "años en el barrio",
+            "value": "45"
+          },
+          {
+            "label": "modelos",
+            "value": "600+"
+          },
+          {
+            "label": "pie contento (el tuyo)",
+            "value": "1"
+          }
+        ],
+        "hasHtml": true
+      },
+      "body": "\n# Paso Firme · Calzado para toda la familia\n\nTres generaciones en el calzado nos han enseñado que un buen zapato cambia el día. En Paso Firme medimos y escuchamos antes de vender, porque la comodidad se nota al caminar.\n\nY cuando se desgastan, también los arreglamos: suelas, tacones y más. Zapatillas, botas, zapatos y sandalias para toda la familia, con marcas para cada bolsillo.\n\n## Lo que encontrarás\n\n- **Zapatillas** — Casual y deportivas. Desde 39,90 €\n- **Running** — Amortiguación de calidad. Desde 59,90 €\n- **Sneakers urbanas** — Para el día a día. Desde 49,90 €\n- **Zapatos de vestir** — Piel y confort. Desde 64,90 €\n- **Tacones y salón** — Elegantes y estables. Desde 44,90 €\n- **Botas** — Resistentes al invierno. Desde 69,90 €\n\n## Por qué venir\n\n- Por el asesoramiento: te medimos el pie y te aconsejamos sin prisa.\n- Porque cubrimos todas las tallas, del 17 al 48, y cambiamos en 30 días.\n- Por el arreglo de calzado cuando se desgasta y los precios justos.\n\n## Una voz del local\n\n> \"Muy buen asesoramiento y precios justos.\"\n> — David\n\n## Ficha técnica\n\n- **Categoría:** Calzado\n- **Subcategoría:** Calzado familiar\n- **Dirección:** Calle del Comercio 9\n- **Horario:** L–S 9:30–20:00\n"
+    }
+  ]
+}

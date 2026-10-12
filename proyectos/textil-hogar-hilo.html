@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hilo & Hogar · Textil hogar y mercería</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6efe6;--bg2:#fffaf3;--card:rgba(160,90,50,.06);--line:rgba(120,70,40,.18);--txt:#3a2a22;--mut:#7e6a5d;--a:#c0623a;--a2:#d9a066;--on:#fff;--navbg:rgba(246,239,230,.92);--hf:'DM Serif Display',serif;--tt:none;--hw:400;--r:20px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.65}
+h1,h2,h3,.logo{font-family:var(--hf);text-transform:var(--tt);font-weight:var(--hw);line-height:1.05}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:100px 0;position:relative}
+.eyebrow{font-weight:700;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--a);margin-bottom:12px;display:block}
+
+.blobs{position:fixed;inset:0;z-index:-1;overflow:hidden;background:var(--bg)}
+.blobs i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.28;animation:float 15s ease-in-out infinite}
+.blobs i:nth-child(1){width:420px;height:420px;background:var(--a);top:5%;left:-6%}
+.blobs i:nth-child(2){width:360px;height:360px;background:var(--a2);top:50%;right:-8%;animation-delay:-6s}
+.blobs i:nth-child(3){width:300px;height:300px;background:var(--a);bottom:-6%;left:40%;animation-delay:-10s;opacity:.5}
+@keyframes float{50%{transform:translate(50px,-60px) scale(1.15)}}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:16px 0;transition:.35s}
+nav.sc{background:var(--navbg);backdrop-filter:blur(14px);padding:10px 0;border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.65rem;display:flex;align-items:center;gap:10px;color:#3a2a22}
+nav.sc .logo{color:var(--txt)}
+.logo b{display:grid;place-items:center;width:36px;height:36px;border-radius:calc(var(--r) - 4px);background:linear-gradient(135deg,var(--a),var(--a2));color:var(--on);font-size:1.1rem}
+nav ul{display:flex;gap:28px;list-style:none;font-size:.92rem;font-weight:500;color:#7e6a5d}
+nav.sc ul{color:var(--mut)}
+nav ul a:hover{color:var(--a)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--r);font-weight:600;font-size:.92rem;border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer;transition:.3s;font-family:inherit}
+.btn:hover{transform:translateY(-3px);border-color:var(--a)}
+.btn.pri{background:linear-gradient(135deg,var(--a),var(--a2));color:var(--on);border:0;box-shadow:0 10px 30px color-mix(in srgb,var(--a) 40%,transparent)}
+.btn.pri:hover{box-shadow:0 16px 40px color-mix(in srgb,var(--a) 60%,transparent)}
+.btn.ghost{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.4)}
+@media(max-width:850px){nav ul{display:none}}
+
+/* hero split */
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;position:relative;overflow:hidden}
+.hero.split .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(3.2rem,8.5vw,6.6rem)}
+.hero h1 span{background:linear-gradient(100deg,var(--a),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);font-size:1.1rem;max-width:480px;margin:22px 0 32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.tag{display:inline-flex;gap:8px;align-items:center;padding:7px 16px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--a);font-size:.82rem;font-weight:600;margin-bottom:22px}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--a);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--a) 70%,transparent)}100%{box-shadow:0 0 0 12px transparent}}
+.vis{position:relative}
+.vis .main{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:calc(var(--r) + 16px);border:1px solid var(--line);box-shadow:0 30px 80px color-mix(in srgb,var(--a) 30%,transparent);animation:bob 7s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-14px) rotate(-.6deg)}}
+.chip{position:absolute;padding:14px 18px;border-radius:18px;border:1px solid var(--line);background:var(--navbg);backdrop-filter:blur(14px);animation:bob 6s ease-in-out infinite}
+.chip small{display:block;color:var(--mut);font-size:.74rem}
+.chip strong{font-family:var(--hf);font-size:1.7rem;color:var(--a);line-height:1.1}
+.chip.a{left:-28px;bottom:14%;animation-delay:-2s}.chip.b{right:-16px;top:8%;animation-delay:-4s}
+/* hero center */
+.hero.center{justify-content:center;text-align:center;color:#fff}
+.hero.center .bg{position:absolute;inset:0;background:url(https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1900&q=80) center/cover;transform:scale(1.1);animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.25) translate(-2%,2%)}}
+.hero.center::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.45) 50%,#f6efe6)}
+.hero.center .in{position:relative;z-index:2}
+.hero.center p{color:#eee;margin-inline:auto}
+.hero.center .cta{justify-content:center}
+.hero.center h1 span{background:none;color:var(--a);-webkit-text-fill-color:var(--a)}
+.hero.center .tag{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:#fff}
+@media(max-width:900px){.hero.split .wrap{grid-template-columns:1fr}.chip.a{left:8px}.chip.b{right:8px}}
+
+.marq{border-block:1px solid var(--line);background:var(--card);overflow:hidden;padding:16px 0}
+.marq div{display:flex;gap:46px;width:max-content;animation:mq 30s linear infinite;font-family:var(--hf);font-size:1.5rem;text-transform:var(--tt);color:var(--mut)}
+.marq span::after{content:"✦";color:var(--a);margin-left:46px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.head{max-width:620px;margin-bottom:54px}
+.head.c{margin-inline:auto;text-align:center}
+.head h2{font-size:clamp(2.4rem,5.5vw,4rem)}
+.head h2 em{font-style:normal;color:var(--a)}
+.head p{color:var(--mut);margin-top:14px}
+
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.perk{padding:28px;border-radius:var(--r);border:1px solid var(--line);background:var(--card);transition:.35s}
+.perk:hover{transform:translateY(-8px);border-color:var(--a)}
+.perk .ic{font-size:1.8rem;width:56px;height:56px;display:grid;place-items:center;border-radius:16px;background:color-mix(in srgb,var(--a) 14%,transparent);margin-bottom:14px}
+.perk h3{font-size:1.35rem;margin-bottom:6px}.perk p{color:var(--mut);font-size:.9rem}
+@media(max-width:900px){.perks{grid-template-columns:1fr 1fr}}@media(max-width:520px){.perks{grid-template-columns:1fr}}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.item{border-radius:calc(var(--r) + 6px);overflow:hidden;background:var(--bg2);border:1px solid var(--line);transition:.45s;position:relative}
+.item:hover{transform:translateY(-10px);border-color:var(--a);box-shadow:0 24px 60px color-mix(in srgb,var(--a) 22%,transparent)}
+.item .im{height:290px;overflow:hidden;position:relative}
+.item img{width:100%;height:100%;object-fit:cover;transition:.8s}
+.item:hover img{transform:scale(1.12) rotate(1deg)}
+.item .pr{position:absolute;top:14px;right:14px;background:var(--a);color:var(--on);font-weight:700;padding:6px 14px;border-radius:99px;font-size:.88rem}
+.item .tx{padding:22px}.item h3{font-size:1.5rem}.item p{color:var(--mut);font-size:.9rem;margin-top:6px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.grid{grid-template-columns:1fr}}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about .pic{position:relative}
+.about .pic img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:calc(var(--r) + 20px);border:1px solid var(--line);box-shadow:0 30px 70px color-mix(in srgb,var(--a) 25%,transparent)}
+.about .pic::after{content:"";position:absolute;inset:-14px 14px 14px -14px;border:2px solid var(--a);border-radius:calc(var(--r) + 20px);z-index:-1;animation:bob 8s ease-in-out infinite}
+.about h2{font-size:clamp(2.2rem,4.6vw,3.4rem);margin-bottom:18px}.about h2 em{font-style:normal;color:var(--a)}
+.about p{color:var(--mut);margin-bottom:14px}
+.nums{display:flex;gap:34px;margin-top:26px;flex-wrap:wrap}
+.nums b{display:block;font-family:var(--hf);font-size:2.9rem;color:var(--a);line-height:1}
+.nums span{font-size:.84rem;color:var(--mut)}
+@media(max-width:850px){.about{grid-template-columns:1fr}}
+
+.band{height:380px;background:url(https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1900&q=80) center/cover fixed;position:relative;display:grid;place-items:center;text-align:center;color:#fff}
+.band::before{content:"";position:absolute;inset:0;background:color-mix(in srgb,#5b2e1a 72%,transparent)}
+.band blockquote{position:relative;font-family:var(--hf);font-size:clamp(1.6rem,4vw,2.7rem);max-width:800px;padding:0 24px;text-transform:none}
+.band cite{display:block;margin-top:16px;font:600 .85rem Inter;letter-spacing:.15em;text-transform:uppercase;font-style:normal;opacity:.85}
+
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rc{padding:30px;border-radius:var(--r);border:1px solid var(--line);background:var(--card);transition:.35s}
+.rc:hover{transform:translateY(-6px);border-color:var(--a)}
+.rc .st{color:var(--a);letter-spacing:3px;margin-bottom:10px}.rc p{color:var(--mut);font-style:italic}.rc b{display:block;margin-top:14px;font-size:.9rem}
+@media(max-width:900px){.rev{grid-template-columns:1fr}}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;border-radius:calc(var(--r) + 14px);overflow:hidden;border:1px solid var(--line);background:var(--bg2)}
+.contact .pic{background:url(https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80) center/cover;min-height:400px}
+.contact .fm{padding:48px}
+.contact h2{font-size:2.6rem;margin-bottom:8px}.contact p{color:var(--mut);margin-bottom:22px}
+form{display:grid;gap:14px}
+input,select,textarea{width:100%;padding:14px 16px;border-radius:calc(var(--r) - 2px);border:1px solid var(--line);background:var(--bg);color:var(--txt);font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--a);border-color:transparent}
+.ok{display:none;color:var(--a);font-weight:600}
+@media(max-width:850px){.contact{grid-template-columns:1fr}.contact .pic{min-height:220px}.contact .fm{padding:28px}}
+
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+footer .logo{color:var(--txt)}
+
+.rv{opacity:0;transform:translateY(44px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+/*resp*/
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+.navtg{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line,rgba(255,255,255,.2));background:var(--card,rgba(255,255,255,.08));cursor:pointer;flex:none;position:relative}
+.navtg i,.navtg i::before,.navtg i::after{position:absolute;left:12px;width:20px;height:2px;border-radius:2px;background:var(--txt,#fff);transition:.3s;content:""}
+.navtg i{top:21px}.navtg i::before{top:-6px;left:0}.navtg i::after{top:6px;left:0}
+.navtg.on i{background:transparent}.navtg.on i::before{top:0;transform:rotate(45deg)}.navtg.on i::after{top:0;transform:rotate(-45deg)}
+@media(max-width:850px){
+ .navtg{display:block}
+ nav{gap:10px}
+ nav ul.open{display:flex!important;flex-direction:column;gap:0!important;position:absolute;top:calc(100% + 8px);left:12px;right:12px;background:var(--bg);color:var(--mut)!important;border:1px solid var(--line,rgba(255,255,255,.15));border-radius:18px;padding:8px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+ nav ul.open a{display:block;padding:14px 16px;border-radius:12px;color:var(--txt)}
+ nav ul.open a:hover{background:var(--card)}
+ .band,.hero .bg{background-attachment:scroll!important}
+ section{padding-top:72px!important;padding-bottom:72px!important}
+}
+@media(max-width:560px){
+ .wrap{padding-left:18px!important;padding-right:18px!important}
+ nav .btn{padding:10px 14px!important;font-size:.8rem!important}
+ .logo{font-size:1.35rem!important}
+ .logo b{width:32px!important;height:32px!important}
+ h1{font-size:clamp(2.5rem,13vw,3.4rem)!important;word-break:break-word}
+ h2{font-size:clamp(2rem,9.5vw,2.8rem)!important}
+ .hero{padding-top:110px!important;min-height:auto!important}
+ .btn{padding:12px 20px}
+ .cta .btn{flex:1 1 auto;justify-content:center}
+ .res,.quote .fm,.book .fm,.contact .fm{padding:24px!important}
+ .res{border-radius:24px!important}
+ .band{height:300px}
+ .chip,.badge{padding:10px 14px}
+ .nums{gap:22px!important}
+ .search{max-width:100%}
+ #toast{left:16px;right:16px;bottom:16px;text-align:center}
+}
+@media(max-width:360px){nav .btn{display:none!important}}
+</style>
+</head>
+<body>
+<div class="blobs"><i></i><i></i><i></i></div>
+<nav id="nav"><div class="wrap">
+  <a href="#" class="logo"><b>H</b>Hilo & Hogar</a>
+  <ul><li><a href="#catalogo">Productos</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#opiniones">Opiniones</a></li><li><a href="#contacto">Contacto</a></li></ul>
+  <a href="#contacto" class="btn pri">Presupuesto</a>
+</div></nav>
+
+<header class="hero split"><div class="wrap">
+  <div class="rv"><div class="tag">Calor de hogar</div><h1>Viste tu casa<br><span>con cariño</span></h1><p>Ropa de cama, toallas, cortinas, manteles y todo lo necesario para coser y crear. Textil de calidad al mejor precio.</p>
+  <div class="cta"><a href="#catalogo" class="btn pri">Ver textiles →</a><a href="#contacto" class="btn">Pide medidas</a></div></div>
+  <div class="vis rv"><img class="main" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80" alt="Hilo & Hogar">
+  <div class="chip a"><small>Colores disponibles</small><strong>80+</strong></div>
+  <div class="chip b"><small>Cortinas a medida</small><strong>Sí</strong></div></div>
+</div></header>
+
+<div class="marq"><div><span>Ropa de cama</span><span>Toallas</span><span>Cortinas a medida</span><span>Mercería</span><span>Manteles</span><span>Cojines</span><span>Ropa de cama</span><span>Toallas</span><span>Cortinas a medida</span><span>Mercería</span><span>Manteles</span><span>Cojines</span></div></div>
+
+<section><div class="wrap perks"><div class="perk rv"><div class="ic">🛏️</div><h3>Ropa de cama</h3><p>Algodón, lino y percal.</p></div><div class="perk rv"><div class="ic">🪟</div><h3>Cortinas a medida</h3><p>Confección en nuestro taller.</p></div><div class="perk rv"><div class="ic">🧵</div><h3>Mercería completa</h3><p>Hilos, botones y lanas.</p></div><div class="perk rv"><div class="ic">🏠</div><h3>Asesoría deco</h3><p>Combinamos colores y texturas.</p></div></div></section>
+
+<section id="catalogo">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Textil</span><h2>Todo para <em>vestir tu hogar</em></h2><p>Tejidos suaves y duraderos para cada estancia.</p></div>
+    <div class="grid"><article class="item rv"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Juegos de cama"><span class="pr">Desde 29,90 €</span></div><div class="tx"><h3>Juegos de cama</h3><p>Suaves y fáciles de lavar.</p></div></article><article class="item rv"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Toallas"><span class="pr">Desde 8,90 €</span></div><div class="tx"><h3>Toallas</h3><p>Absorbentes y esponjosas.</p></div></article><article class="item rv"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=800&q=80" alt="Cortinas"><span class="pr">Desde 24,90 €</span></div><div class="tx"><h3>Cortinas</h3><p>Confección a medida.</p></div></article><article class="item rv"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Cojines y plaids"><span class="pr">Desde 9,90 €</span></div><div class="tx"><h3>Cojines y plaids</h3><p>Un toque de calidez.</p></div></article><article class="item rv"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Manteles y cocina"><span class="pr">Desde 12,90 €</span></div><div class="tx"><h3>Manteles y cocina</h3><p>Colores para la mesa.</p></div></article><article class="item rv"><div class="im"><img loading="lazy" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Mercería"><span class="pr">Desde 1,50 €</span></div><div class="tx"><h3>Mercería</h3><p>Hilos, agujas y lanas.</p></div></article></div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="wrap about">
+    <div class="pic rv"><img loading="lazy" src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=900&q=80" alt="Hilo & Hogar"></div>
+    <div class="rv">
+      <span class="eyebrow">Sobre nosotros</span>
+      <h2>Telas con <em>historia</em></h2>
+      <p>Somos una casa familiar de textil y mercería. Aconsejamos con paciencia y cosemos lo que haga falta para que todo quede perfecto.</p><p>Si lo imaginas, lo hacemos a medida.</p>
+      <div class="nums"><div><b data-n="40" data-s="">0</b><span>años en el barrio</span></div><div><b data-n="80" data-s="+">0</b><span>tejidos y colores</span></div><div><b data-n="2000" data-s="+">0</b><span>cortinas hechas</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="band"><blockquote>“Me hicieron las cortinas justo como las soñé.”<cite>— Clienta</cite></blockquote></div>
+
+<section id="opiniones">
+  <div class="wrap">
+    <div class="head c rv"><span class="eyebrow">Opiniones</span><h2>Lo que dicen nuestros <em>clientes</em></h2></div>
+    <div class="rev"><div class="rc rv"><div class="st">★★★★★</div><p>“Textil de calidad y trato encantador.”</p><b>Teresa</b></div><div class="rc rv"><div class="st">★★★★★</div><p>“Encuentro de todo en la mercería.”</p><b>Julia</b></div><div class="rc rv"><div class="st">★★★★★</div><p>“Cortinas perfectas y puntuales.”</p><b>Ramón</b></div></div>
+  </div>
+</section>
+
+<section id="contacto" style="padding-top:20px">
+  <div class="wrap"><div class="contact rv">
+    <div class="pic"></div>
+    <div class="fm">
+      <span class="eyebrow">Contacto</span>
+      <h2>Pide presupuesto de cortinas</h2>
+      <p>Nos acercamos a tomar medidas sin compromiso.</p>
+      <form id="f">
+        <input required placeholder="Tu nombre">
+        <input required type="email" placeholder="Correo electrónico">
+        <textarea rows="3" placeholder="Medidas y estancia"></textarea>
+        <button class="btn pri" type="submit">Pedir presupuesto</button>
+        <div class="ok" id="ok">¡Gracias! Te respondemos muy pronto ✨</div>
+      </form>
+    </div>
+  </div></div>
+</section>
+
+<footer><div class="wrap"><a href="#" class="logo"><b>H</b>Hilo & Hogar</a><span>Calle del Telar 4 · L–S 10:00–20:00</span><span>© 2026 Hilo & Hogar</span></div></footer>
+
+<script>
+const nav=document.getElementById('nav');
+const sc=()=>nav.classList.toggle('sc',scrollY>40);addEventListener('scroll',sc);sc();
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add('in');
+  e.target.querySelectorAll('[data-n]').forEach(c=>{const t=+c.dataset.n,s=c.dataset.s||'',st=performance.now();
+    (function k(n){const p=Math.min((n-st)/1600,1);c.textContent=Math.round(t*(1-Math.pow(1-p,3))).toLocaleString('es')+s;if(p<1)requestAnimationFrame(k)})(st)});
+  io.unobserve(e.target)}),{threshold:.15});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').style.display='block';e.target.reset()});
+</script>
+<script>/*resp*/(function(){var n=document.querySelector('nav'),u=n&&n.querySelector('ul');if(!u)return;
+var b=document.createElement('button');b.className='navtg';b.setAttribute('aria-label','Menú');b.innerHTML='<i></i>';
+(n.querySelector('.wrap')||n).appendChild(b);
+function c(){u.classList.remove('open');b.classList.remove('on')}
+b.onclick=function(){var o=u.classList.toggle('open');b.classList.toggle('on',o)};
+u.addEventListener('click',function(e){if(e.target.closest('a'))c()});
+addEventListener('resize',function(){if(innerWidth>850)c()})})();</script>
+</body>
+</html>
